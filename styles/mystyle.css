@@ -15,16 +15,18 @@ main{
     margin: 0 auto;
     object-fit: cover;
     overflow: hidden;
+    height: 100px;   
 }
 .img{
-    position: relative;
+    position: fixed;
     max-width: 100%;
     margin-left:80%;
-    max-width: 100%;
     max-height: 200px;
-    margin: 0 auto;
-    object-fit: cover;
-    overflow: hidden;
+    min-height: 200px;
+}
+.alertError{
+    background-color: rgb(207, 120, 120);
+    border: 2px solid red;
 }
 
 /*MAIN*/
@@ -34,8 +36,26 @@ main{
     align-items: center;
     margin-left: 100px;
     margin-right: 100px;
-    position: fixed;
+    position: relative;
     
+}
+.pet{
+    border: 1px solid black;
+    background-color: antiquewhite;
+    padding: 10px;
+
+}
+#namePet{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    margin:20px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+@media(max-width:700px){
+    #namePet{
+        grid-template-columns: repeat(2,48%); 
+    }
 }
 
 #summary{
