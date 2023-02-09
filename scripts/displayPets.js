@@ -28,14 +28,15 @@ function displayPetTable(){
     for(let i=0;i<petSalon.pet.length;i++){
         let pet     = petSalon.pet[i];
         rows+=`<tr>
-        <td>Name: ${pet.name}</td>
-        <td>Age: ${pet.age}</td>
-        <td>Gender: ${pet.gender}</td>
-        <td>Breed: ${pet.breed}</td>
-        <td>Service: ${pet.service}</td>
-        <td>Type of the pet: ${pet.type}</td>
-        <td>Owner's name: ${pet.owner}</td>
-        <td>Phone Number: ${pet.phoneNumber}</td>
+        <td>${pet.name}</td>
+        <td>${pet.age}</td>
+        <td>${pet.gender}</td>
+        <td>${pet.breed}</td>
+        <td>${pet.service}</td>
+        <td>${pet.type}</td>
+        <td>${pet.owner}</td>
+        <td>${pet.phoneNumber}</td>
+        <td><button class="btn btn-sm btm-outline-danger" onclick()="deletePet()"">Remove</button></td>
         </tr>`;
     }
     tbody.innerHTML = rows;

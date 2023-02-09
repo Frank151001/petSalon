@@ -78,18 +78,41 @@ function clearForm(){
 function updateInfo(){
     document.getElementById("numberOfPets").innerHTML=petSalon.pet.length;
 }
+function search(){
+    let text = document.getElementById("txtSearch").value;
+    console.log("search text is: "+text);
+    for(let i=0;i<petSalon.pet.length;i++){
+        const pet=petSalon.pet[i];
+        if(pet.name.toLowerCase().includes(text.toLowerCase())){
+            results.push(pet);
+        }
+    }
+    console.log(results);
+}
+
+function deletePet(name){
+    let proceed = confirm("Are you sure you want to remove" + name + "from the salon?");
+    if(proceed===true){
+        for(let i=0;i<petSalon.pet.length;i++){
+            const pet = petSalon.pet[i];
+            if(pet.name===name){
+                petSalon.pet.splice(i,1);
+                displayPetTable();
+            }
+        }
+    }
+}
 
 
 function init(){
     displayFooterInfo();
-    let scooby= new Pet("Scooby",60,"Male","Dane","Grooming","Bird","Karen","555-555-555");
-    let cookie = new Pet("Cookie",30,"Female","Chihuahua","Hair","Cat","Karen","555-555-555");
-    let scrappy = new Pet("Scrappy",80,"Male","Golden Retrivier","Nails","Dog","Karen","555-555-555");
+    let scooby= new Pet("Scooby",60,"Male","Dane","Grooming","Bird","Karen",555 );
+    let cookie = new Pet("Cookie",30,"Female","Chihuahua","Hair","Cat","Karen",555-555-555);
+    let scrappy = new Pet("Scrappy",80,"Male","Golden Retrivier","Nails","Dog","Karen",555-555-555);
     petSalon.pet.push(scooby,cookie,scrappy);
     updateInfo();
     displayPetTable();
     //displayPetCards();
-
-//displayNamePet();
+    //displayNamePet();
 }
 window.onload=init;
