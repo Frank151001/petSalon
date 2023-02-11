@@ -14,7 +14,7 @@ let petSalon={
     pet:[]
 }
 function displayFooterInfo(){
-    document.getElementById("footer").innerHTML=`${petSalon.name} our phone number is ${petSalon.phoneNumber} it opens at ${petSalon.workingHours.open}`;
+    document.getElementById("footer").innerHTML=`${petSalon.name} our phone number is ${petSalon.phoneNumber} it opens at ${petSalon.workingHours.open} to ${petSalon.workingHours.close}<br> <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-solid fa-envelope"></i>`;
 }
 
 function initFooter(){

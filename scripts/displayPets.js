@@ -36,7 +36,7 @@ function displayPetTable(){
         <td>${pet.type}</td>
         <td>${pet.owner}</td>
         <td>${pet.phoneNumber}</td>
-        <td><button class="btn btn-sm btm-outline-danger" onclick()="deletePet()"">Remove</button></td>
+        <td><button class="btn btn-sm btn-outline-danger" onclick="deletePet('${pet.name}')">Remove</button></td>
         </tr>`;
     }
     tbody.innerHTML = rows;

@@ -7,19 +7,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="styles/mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>The Fashion Pet</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="service.html">Service</a>
-            <a href="register.html">Register</a>
-        </nav>
+        <div class="info">
+            <h1><i class="fa-solid fa-paw"></i> The Fashion Pet</h1>
+            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary " data-bs-theme="dark" >
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html"><i class="fa-solid fa-house"></i></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>     
+        </div>
     </header>
-    <main>
-        <h2>Register a new pet</h2>
+    <main class="container">
+        <div class="registerPet">
+            <h2>Register a new pet</h2>
         <p>Pet in the salon= <span id="numberOfPets"></span></p>
         <div class="container">
             <div class="mb-3">
@@ -63,31 +86,37 @@
             <div class="mb-3">
                 <label class="form-label">Phone Number:</label>
                 <input type="text" class="form-control" id="phoneNumber">
+
             </div>
             <button class="btn btn-light" onclick="register();">Register</button>
         </div>
 
-        <div class="ms-5 mt-3">
-            <input id="txtSearch" type="search" placeholder="Search">
-            <button></button>
-        </div>
-        <p id="namePet"> </p>
-        <table class="table table-bordered table-stripped ms-t mt-3">
-            <thead class="table-dark">
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Breed</th>
-                <th>Service</th>
-                <th>Type of the pet</th>
-                <th>Owner's name</th>
-                <th>Phone number</th>
-                <th>Options</th>
-            </thead>
-            <tbody id="tbPets-body">
+        <div class="pets">
+            <div class="ms-5 mt-3">
+                <input id="txtSearch" type="search" placeholder="Search">
+                <button class="btn btn-sm btn-primary" onclick="search()">Search</button>
+            </div>
+            
+            <p id="namePet"> </p>
+            <table class="table table-bordered table-stripped ms-t mt-3">
+                <thead class="table-dark">
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Breed</th>
+                    <th>Service</th>
+                    <th>Type of the pet</th>
+                    <th>Owner's name</th>
+                    <th>Phone number</th>
+                    <th>Options</th>
+                </thead>
+                <tbody id="tbPets-body">
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        
     </main>
     <footer id="footer">
         
