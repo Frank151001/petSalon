@@ -1,6 +1,6 @@
 //object literal
 let petSalon={
-    name:"The fashion pet",
+    name:"Pet Fashion Boutique",
     phoneNumber:"555-555-555",
     workingHours:{
         open:"9:00 am",

@@ -40,7 +40,6 @@ function validPet(aPet){
         valid=false;
         inputPhoneNumber.classList.add("alertError");
     }
-
     return valid;
 }
 
@@ -55,7 +54,6 @@ function register(){
         //displayPetCards();
         displayPetTable();
         clearForm();
-        
     }
 }
 function clearForm(){
@@ -85,7 +83,6 @@ function search(){
 }
 
 function deletePet(name){
-    console.log("DELETING..."+name);
     let proceed = confirm("Are you sure you want to remove " + name + " from the salon?");
     if(proceed===true){
         for(let i=0;i<petSalon.pet.length;i++){
@@ -98,7 +95,6 @@ function deletePet(name){
         }
     }
 }
-
 
 function init(){
     displayFooterInfo();
